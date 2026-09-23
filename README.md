@@ -1,272 +1,167 @@
-# frontend - Proyecto final
+# 🛍️ Webew — Frontend ( Proyecto Full Stack )
 
-Mi proyecto es una aplicación web moderna desarrollada con React que permite a los usuarios explorar, buscar y gestionar productos dentro de un marketplace.
-Incluye autenticación, favoritos, panel de administración y una interfaz limpia y responsive
+![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
+![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=flat&logo=vitest&logoColor=white)
 
-## Descripcion
+Aplicación web del marketplace **Webew**, donde los usuarios pueden explorar, buscar y gestionar productos: catálogo, búsqueda en tiempo real, favoritos y un panel de administración para el CRUD de productos.
 
-### Aplicación para visualizar, buscar y administrar productos consumiendo una API REST creada en Node.js.
+🔗 **App en producción:** [https://frontend-proyecto-final-sergio.onrender.com](https://frontend-proyecto-final-sergio.onrender.com)
+🔗 **API (backend):** [https://backend-proyecto-final-sergio.onrender.com](https://backend-proyecto-final-sergio.onrender.com) — [repo Webew-backend](https://github.com/SergioPerez3/Webew-backend)
 
-El usuario puede:
+---
 
-Navegar por el catálogo de productos
+## ✨ Características
 
-Filtrar por categorías
-
-Buscar en tiempo real
-
-Ver productos destacados
-
-Acceder a la vista de detalle
-
-Añadir productos a favoritos
-
-Registrarse e iniciar sesión
-
-Acceder a rutas protegidas
-
-Administrar productos (crear, editar, eliminar) si es administrador
-
-El frontend está construido con React + Vite, utiliza Context API para la gestión global del estado y se comunica con el backend mediante fetch/axios.
-
-## Caractéristicas
-
-- Listado de productos
-
-- Búsqueda en tiempo real
-
-- Filtros por categoría
-
-- Ordenamiento por precio, nombre o categoría
-
-- Paginación
-
-- Vista de detalle del producto
-
-- Productos destacados
-
-- Gestión de favoritos por usuario
-
-- Panel de administración
-
-- Crear productos
-
-- Editar productos
-
-- Eliminar productos
-
-- Registro de usuarios
-
--Inicio de sesión con JWT
-
-- Rutas protegidas mediante autenticación
-
-- Context global para Auth y Favoritos
-
+- Listado de productos con búsqueda en tiempo real y filtros por categoría
+- Ordenación por precio, nombre o categoría, y paginación
+- Vista de detalle de producto y productos destacados
+- Gestión de favoritos por usuario, persistida en la base de datos
+- Registro e inicio de sesión con JWT, rutas protegidas
+- **Panel de administración**: crear, editar y eliminar productos
+- Contexts globales para autenticación y favoritos
 - Diseño responsive
+- Tests con Vitest y Testing Library
 
-- Testing básico con Vitest
+## 🛠 Tecnologías utilizadas
 
-## Tecnologías utilizadas
-
-- React
-
-- Vite
-
+- React + Vite
 - React Router DOM
-
 - Context API
+- Tailwind CSS (parcial) + CSS
+- Fetch / Axios para consumir la API
+- Vitest + Testing Library
 
-- Tailwind CSS (o tu sistema de estilos)
+## 📁 Estructura del proyecto
 
-- Fetch API / Axios (según lo que uses)
+```
+frontend-proyecto-final-sergio/
+├── public/
+│   └── images/
+│       └── products/
+│           └── default.jpg
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── FavoriteButton.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Header.jsx
+│   │   ├── Navbar.jsx / Navbar.css
+│   │   ├── ProductCard.jsx
+│   │   ├── ProductCarousel.jsx
+│   │   ├── ProductFilters.jsx
+│   │   ├── ProductForm.jsx
+│   │   └── ProductList.jsx
+│   ├── context/
+│   │   ├── AuthContext.jsx
+│   │   └── FavoritesContext.jsx
+│   ├── hooks/
+│   │   └── useAuth.js
+│   ├── layouts/
+│   │   ├── AdminLayout.jsx
+│   │   └── MainLayout.jsx
+│   ├── loaders/
+│   │   └── authLoader.js
+│   ├── pages/
+│   │   ├── admin/
+│   │   │   ├── AdminProductPage.jsx
+│   │   │   └── DashboardPage.jsx
+│   │   ├── AboutUs.jsx
+│   │   ├── ContactUs.jsx
+│   │   ├── FavoritesPage.jsx
+│   │   ├── Home.jsx
+│   │   ├── LoginPage.jsx
+│   │   ├── NotFoundPage.jsx
+│   │   ├── ProductDetailPage.jsx
+│   │   ├── ProductsPage.jsx
+│   │   └── RegisterPage.jsx
+│   ├── routes/
+│   │   └── router.jsx
+│   ├── services/
+│   │   ├── authService.js
+│   │   ├── favoriteService.js
+│   │   └── productService.js
+│   ├── tests/
+│   ├── App.jsx
+│   ├── index.css
+│   ├── main.jsx
+│   └── setupTests.jsx
+├── .env-example
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── package-lock.json
+└── vite.config.js
+```
 
-- Vitest
+## ⚙️ Instalación
 
-- Testing Library
+1. Clona el repositorio:
+   ```bash
+   git clone <repository_url>
+   cd frontend-proyecto-final-sergio
+   ```
 
-## Instalación
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
 
-### Clonar repositorio
+3. Crea un archivo `.env` usando `.env-example` como referencia:
+   ```env
+   VITE_API_URL=http://localhost:3000/api
+   ```
+   En producción:
+   ```env
+   VITE_API_URL=https://backend-proyecto-final-sergio.onrender.com/api
+   ```
+
+## ▶️ Uso
 
 ```bash
-git clone <url-del-repositorio>
-```
-
-### Ingresar al proyecto
-
-```bash
-cd frontend-proyecto-final-Sergio
-```
-
-### Instalar dependencias
-
-```bash
-npm install
-```
-
-## Variables de entorno
-
-Crear un archivo .env en la raíz del proyecto usando como referencia .env.example.
-
-### .env.example
-
-```env
-VITE_API_URL=
-```
-
-### Ejemplo local
-
-```env
-VITE_API_URL=http://localhost:3000/api
-```
-
-### Ejemplo producción
-
-```env
-VITE_API_URL=https://mi-api.onrender.com/api
+npm run dev      # desarrollo → http://localhost:5173
+npm test         # tests
+npm run build    # build de producción → carpeta dist/
 ```
 
 ---
 
-## Ejecutar en desarrollo
+## 🔐 Autenticación
 
-```bash
-npm run dev
-```
-
-La aplicación estará disponible en:
-
-```txt
-http://localhost:5173
-```
-
----
-
-## Ejecutar tests
-
-```bash
-npm test
-```
-
-## vite.config.js
-
-```js
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-
-export default defineConfig({
-  plugins: [react()],
-  test: {
-    globals: true,
-    environment: "jsdom",
-    setupFiles: "./src/setupTests.jsx",
-  },
-});
-```
-
----
-
-## Generar build de producción
-
-```bash
-npm run build
-```
-
-Los archivos generados se encontrarán en:
-
-```txt
-dist/
-```
-
----
-
-## Backend
-
-Este proyecto consume una API REST desarrollada con:
-
-- Node.js
-- Express
-- MongoDB Atlas
-- JWT
-
-La URL del backend se configura mediante:
-
-```env
-VITE_API_URL
-```
-
----
-
-## Estructura del proyecto
-
-```txt
-public/
-└── images/
-    └── products/
-        └── default.jpg
-src/
-│
-├── components/
-├── context/
-├── hooks/
-├── layouts/
-├── loaders/
-├── pages/
-├── routes/
-├── services/
-├── tests/
-│
-├── App.jsx
-├── index.css
-├── main.jsx
-└── setupTests.jsx
-```
-
----
-
-## Autenticación
-
-La aplicación utiliza JWT.
-
-Al iniciar sesión se almacenan en Local Storage:
+La aplicación utiliza JWT. Al iniciar sesión se guardan en `localStorage`:
 
 ```txt
 token
 user
 ```
 
-Las rutas protegidas requieren autenticación para acceder al panel de administración, favoritos y creación/edición de productos.
+Las rutas protegidas requieren autenticación para acceder al panel de administración, favoritos y la creación/edición de productos.
+
+## ⭐ Favoritos
+
+- Los usuarios autenticados pueden añadir productos a favoritos.
+- Los favoritos se guardan en la base de datos y se muestran en una página dedicada.
+- Se pueden eliminar productos individuales o vaciar todos los favoritos.
 
 ---
 
-## Favoritos
+## 📸 Capturas
 
--Los usuarios autenticados pueden añadir productos a favoritos.
+| Inicio | Catálogo y filtros | Login |
+|---|---|---|
+| ![Inicio](screenshots/webew-home.png) | ![Catálogo](screenshots/webew-productos.png) | ![Login](screenshots/webew-login.png) |
 
--Los favoritos se guardan en la base de datos y se muestran en una página dedicada.
+| Favoritos | Panel admin — editar producto |
+|---|---|
+| ![Favoritos](screenshots/webew-favoritos.png) | ![Editar producto](screenshots/webew-admin-editar.png) |
 
--Se pueden eliminar productos individuales o vaciar todos los favoritos.
+## 🔮 Roadmap
 
-## Deploy
+- [ ] Carrito de compras (próximamente, junto con el backend)
 
-Frontend desplegado en:
+## 👤 Autor
 
-```txt
-https://tu-api.onrender.com
-```
-
-Backend desplegado en:
-
-```txt
-https://tu-api.onrender.com
-```
-
----
-## Autor
-
-Proyecto desarrollado como práctica del curso Full Stack de Neoland.
-
-Autor: Sergio Pérez Pérez
----
+**Sergio Pérez Pérez** — Proyecto desarrollado como práctica final del curso Full Stack de Neoland.
 

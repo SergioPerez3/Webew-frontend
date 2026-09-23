@@ -10,7 +10,7 @@ import ContactUs from "../pages/ContactUs";
 
 import AdminLayout from "../layouts/AdminLayout";
 import AdminProductPage from "../pages/admin/AdminProductPage";
-import DashboardPage from "../pages/admin/DaskboardPage";
+import DashboardPage from "../pages/admin/DashboardPage";
 import RegisterPage from "../pages/RegisterPage";
 import LoginPage from "../pages/LoginPage";
 import authLoader from "../loaders/authLoader";
