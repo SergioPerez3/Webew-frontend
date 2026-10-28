@@ -33,6 +33,17 @@ Aplicación web del marketplace **Webew**, donde los usuarios pueden explorar, b
 - Fetch / Axios para consumir la API
 - Vitest + Testing Library
 
+## 📸 Capturas
+
+| Inicio | Catálogo y filtros | Login |
+|---|---|---|
+| ![Inicio](screenshots/webew-home.png) | ![Catálogo](screenshots/webew-productos.png) | ![Login](screenshots/webew-login.png) |
+
+| Favoritos | Panel admin — editar producto |
+|---|---|
+| ![Favoritos](screenshots/webew-favoritos.png) | ![Editar producto](screenshots/webew-admin-editar.png) |
+
+
 ## 📁 Estructura del proyecto
 
 ```
@@ -147,15 +158,6 @@ Las rutas protegidas requieren autenticación para acceder al panel de administr
 
 ---
 
-## 📸 Capturas
-
-| Inicio | Catálogo y filtros | Login |
-|---|---|---|
-| ![Inicio](screenshots/webew-home.png) | ![Catálogo](screenshots/webew-productos.png) | ![Login](screenshots/webew-login.png) |
-
-| Favoritos | Panel admin — editar producto |
-|---|---|
-| ![Favoritos](screenshots/webew-favoritos.png) | ![Editar producto](screenshots/webew-admin-editar.png) |
 
 ## 🔮 Roadmap
 
